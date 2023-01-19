@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('auth.login');
 });
+Route::get('/pendata', function () {
+    return view('pendata.pendata');
+});
