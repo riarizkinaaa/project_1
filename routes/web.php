@@ -16,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/das1', function () {
-    return view('layout.index');
-});
 Route::get('/das', function () {
-    return view('das');
+    return view('das.das');
 });
+
