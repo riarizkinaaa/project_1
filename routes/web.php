@@ -21,6 +21,6 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 
-Route::get('/index', function () {
-    return view('pendata.index');
+Route::get('/form', function () {
+    return view('pendata.form');
 });
