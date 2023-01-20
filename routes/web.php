@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layout.template');
 });
 Route::get('/login', function () {
     return view('auth.login');
@@ -22,3 +23,13 @@ Route::get('/login', function () {
 Route::get('/pendata', function () {
     return view('pendata.pendata');
 });
+Route::get('/veri', function () {
+    return view('verifikator.dashboard');
+});
+Route::get('/form', function () {
+    return view('pendata.form_anak');
+});
+Route::get('/pimpinan', function () {
+    return view('pimpinan.dash');
+});
+Route::resource('/login',LoginController::class);
