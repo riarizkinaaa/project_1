@@ -21,7 +21,10 @@ Route::get('/login', function () {
     return view('auth.login');
 });
 Route::get('/pendata', function () {
-    return view('pendata.pendata');
+    return view('pendata.data');
+});
+Route::get('/form', function () {
+    return view('pendata.form');
 });
 Route::get('/veri', function () {
     return view('verifikator.dashboard');
