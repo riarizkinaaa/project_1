@@ -29,6 +29,8 @@
   <!-- Plugins css start-->
   <link rel="stylesheet" type="text/css" href="/template/assets/css/datatables.css">
   <link rel="stylesheet" type="text/css" href="/template/assets/css/datatable-extension.css">
+  <link rel="stylesheet" type="text/css" href="/template/assets/css/jsgrid.css">
+  <link rel="stylesheet" type="text/css" href="/template/assets/css/datatables.css">
   <!-- Plugins css Ends-->
   <!-- Bootstrap css-->
   <link rel="stylesheet" type="text/css" href="/template/assets/css/bootstrap.css">
@@ -38,6 +40,7 @@
   <!-- Responsive css-->
   <link rel="stylesheet" type="text/css" href="/template/assets/css/responsive.css">
 </head>
+
 
 <body>
   <!-- Loader starts-->
@@ -97,19 +100,25 @@
                 </li>
                 <li><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
                 </li>
-                <li><a class="nav-link menu-title" href="/form"><i data-feather="sliders"></i><span>Form Pendataan</span></a>
+                <li><a class="nav-link menu-title" href="/form_anak"><i data-feather="sliders"></i><span>Form Pendataan</span></a>
                 </li>
                 <li><a class="nav-link menu-title" href="/pendata"><i data-feather="layout"></i><span>Rekapan Data</span></a>
+                </li>
+                </li>
+                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="package"></i><span>Jumlah Data Hari Ini</span></a>
                 </li>
                 <li class="sidebar-main-title">
                   <div>
                     <h6>Pengguna</h6>
                   </div>
                 </li>
-                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="user-check"></i><span>Profil</span></a>
+                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="user-check"></i><span>Profil</span></a></li>
+                <li class="sidebar-main-title">
+                  <div>
+                    <h6>Bantuan</h6>
+                  </div>
                 </li>
-                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="package"></i><span>Jumlah Data Hari Ini</span></a>
-                </li>
+                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="user-check"></i><span>Kontak Person</span></a></li>
               </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
@@ -155,6 +164,9 @@
   <script src="/template/assets/js/datatable/datatable-extension/dataTables.rowReorder.min.js"></script>
   <script src="/template/assets/js/datatable/datatable-extension/dataTables.scroller.min.js"></script>
   <script src="/template/assets/js/datatable/datatable-extension/custom.js"></script>
+  <script src="/template/assets/js/jsgrid/jsgrid.min.js"></script>
+  <script src="/template/assets/js/jsgrid/griddata.js"></script>
+  <script src="/template/assets/js/jsgrid/jsgrid.js"></script>
   <!-- Plugins JS Ends-->
   <!-- Theme js-->
   <script src="/template/assets/js/script.js"></script>

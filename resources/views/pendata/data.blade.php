@@ -25,12 +25,24 @@
                   <table class="display" id="auto-fill">
                     <thead>
                       <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Office</th>
-                        <th>Age</th>
-                        <th>Start date</th>
-                        <th>Salary</th>
+                        <th>Nama Wali</th>
+                        <th>Pekerjaan Wali</th>
+                        <th>Nomor KK</th>
+                        <th>Nomor NIK</th>
+                        <th>Nama Lengkap Anak</th>
+                        <th>Tempat Lahir</th>
+
+                        <th>Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Alamat</th>
+                        <th>Dusun</th>
+                        <th>Pendidikan Anak</th>
+                        <th>Alamat Sekolah</th>
+                        <th>Kelas Pendidikan Anak</th>
+                        <th>Prestasi Fromal</th>
+                        <th>Perestasi Non Formal</th>
+                        <th>Status Anak</th>
+                        <th>Foto</th>
                       </tr>
                     </thead>
                     <tbody>

@@ -25,3 +25,16 @@ Route::get('/pendata', function () {
 Route::get('/form', function () {
     return view('pendata.form');
 });
+Route::get('/data_anak', function () {
+    return view('pendata.data_anak');
+});
+Route::get('/form_anak', function () {
+    return view('pendata.form_anak');
+});
+Route::get('/form_pendidikan', function () {
+    return view('pendata.form_pendidikan');
+});
+Route::get('/dusun', function () {
+    return view('pendata.form_dusun');
+});
+
