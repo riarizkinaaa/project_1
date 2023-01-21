@@ -50,20 +50,43 @@
         <div class="row">
           <div class="col-12">              
             <div class="login-card">
-              <form class="theme-form login-form">
+              @if (Session::has('success'))
+              <div class="alert alert-primary" role="alert">{{ Session::get('success') }}</div>
+                  
+              @endif
+
+              {{-- <div class="alert alert-primary" role="alert">
+                {{ $message }}
+              </div> --}}
+              <form action="{{ route('login.store') }}" method="post" class="theme-form login-form" >
+                @csrf
                 <h4>Login</h4>
                 <h6>Welcome back! Log in to your account.</h6>
                 <div class="form-group">
-                  <label>Email Address</label>
+                  <label for="email">Email Address</label>
                   <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
-                    <input class="form-control" type="email" required="" placeholder="Test@gmail.com">
+                    <input class="form-control" type="email" required="" name="email" id="email" placeholder="Test@gmail.com">
+                  </div>
+                  <div class="warna" style="color: red">
+                    @error('email')
+                      {{ $message }}
+                        
+                    @enderror
+
                   </div>
                 </div>
                 <div class="form-group">
-                  <label>Password</label>
+                  <label for="password">Password</label>
                   <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
-                    <input class="form-control" type="password" name="login[password]" required="" placeholder="*********">
-                    <div class="show-hide"><span class="show">                         </span></div>
+                    <input class="form-control" type="password" name="password" id="password" required="" placeholder="*********">
+                    <div class="show-hide"><span class="show"></span></div>
+                  </div>
+                  <div class="warna" style="color: red">
+                    @error('password')
+                      {{ $message }}
+                        
+                    @enderror
+
                   </div>
                 </div>
                 <div class="form-group">

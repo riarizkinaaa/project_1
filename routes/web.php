@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnakController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,25 +15,29 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('layout.template');
+// });
 Route::get('/', function () {
-    return view('layout.template');
-});
-Route::get('/login', function () {
     return view('auth.login');
 });
-Route::get('/pendata', function () {
-    return view('pendata.data');
-});
-Route::get('/form', function () {
-    return view('pendata.form');
-});
-Route::get('/veri', function () {
-    return view('verifikator.dashboard');
-});
-Route::get('/form', function () {
-    return view('pendata.form_anak');
-});
-Route::get('/pimpinan', function () {
-    return view('pimpinan.dash');
-});
 Route::resource('/login',LoginController::class);
+
+Route::resource('/anak',AnakController::class);
+
+
+// Route::get('/pendata', function () {
+//     return view('pendata.data');
+// });
+// Route::get('/form', function () {
+//     return view('pendata.form');
+// });
+// Route::get('/veri', function () {
+//     return view('verifikator.dashboard');
+// });
+// Route::get('/form', function () {
+//     return view('pendata.form_anak');
+// });
+// Route::get('/pimpinan', function () {
+//     return view('pimpinan.dash');
+// });

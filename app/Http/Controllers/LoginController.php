@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
@@ -15,7 +17,9 @@ class LoginController extends Controller
      */
     public function index()
     {
-        //
+       
+        return view('auth.login');
+        
     }
 
     /**
@@ -25,7 +29,6 @@ class LoginController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -37,13 +40,67 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'email'=>$request->email,
-            'password'=>$request->password
-        ]);
+            'email'=>['required','email'],
+            'password'=>['required']
+        ],
+        [
+            'email'=>'email anda belum terdaftar',
+            'password'=>'password anda salah'
+        ]
+    );
 
+        // $user=User::whereEmail($request->email)->first();
+        // if($user){
+        //     if(Hash::check($request->password, $user->password)){
+        //         Auth::login($user);
+        //         // dd($user);
+    
+        //         return redirect('pimpinan.dash')->with('success','anda berhasil login');
+        //     }
+        // throw ValidationException::withMessages([
+        //     'email'=>'email tidak terdaftar',
+        //     'password'=>'password anda salah'
+        // ]);
+        // }
 
-        if(Auth::user()->roles==1){
+        // $user=User::whereEmail($request->email)->first();
+        // if(Auth::$user()->role == 'pimpinan'){
+        //     return view('pimpinan.dash',compact('ambil'));
 
+        // }elseif(Auth::user()->role == 'pendata'){
+        //     return view('pendata.pendata');
+
+        // }elseif(Auth::user()->role == 'varivikator'){
+        //     return view('verifikator');
+        // }else{
+        //     return view('userAdmin');
+        // }
+
+            // dd($ambil);
+        $user=User::where('email', '=', $request->email)->first();
+        // dd($user);
+
+        if($user){
+            // dd($user);
+            // echo $user->role;
+            if ($request->password == $user->password) {
+                if($user->role=='pimpinan'){
+                    return view('pimpinan.dash',compact('user'));
+                }elseif ($user->role == 'pendata') {
+                    return view('pendata.pendata',compact('user'));
+                } elseif ($user->role == 'verifikator') {
+                    return view('verifikator',compact('user'));
+                } elseif($user->role == 'superAdmin') {
+                    return view('superadmin.superadmin',compact('user'));
+                }else{
+                    return redirect('/login');
+                }
+            }
+        }else{
+            throw ValidationException::withMessages([
+                'email'=>'email tidak terdaftar',
+                'password'=>'password anda salah','<br>'
+            ]);
         }
 
         // if(Auth::attempt([

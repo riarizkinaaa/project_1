@@ -1,3 +1,5 @@
+@extends('layout.dash_superUser')
+@section('content')
 @extends('layout.dash_pimpinan')
 @section('content')
     
@@ -210,3 +212,5 @@
     </div>
 @endsection
 
+
+@endsection

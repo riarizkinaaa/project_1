@@ -1,4 +1,4 @@
-@extends('layout.pendata')
+@extends('layout.dash_pendata')
 @section('content')
     <!-- Loader starts-->
     <div class="loader-wrapper">
