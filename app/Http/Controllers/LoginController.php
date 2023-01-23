@@ -99,7 +99,7 @@ class LoginController extends Controller
         }else{
             throw ValidationException::withMessages([
                 'email'=>'email tidak terdaftar',
-                'password'=>'password anda salah','<br>'
+                'password'=>'password anda salah'
             ]);
         }
 
