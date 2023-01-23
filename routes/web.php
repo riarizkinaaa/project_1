@@ -19,15 +19,12 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('auth.login');
 });
-Route::get('/pendata', function () {
-    return view('pendata.data');
-});
-Route::get('/form', function () {
-    return view('pendata.form');
-});
 Route::get('/data_anak', function () {
     return view('pendata.data_anak');
 });
+// Route::get('/data_anak', function () {
+//     return view('pendata.data_anak');
+// });
 Route::get('/form_anak', function () {
     return view('pendata.form_anak');
 });
@@ -36,5 +33,8 @@ Route::get('/form_pendidikan', function () {
 });
 Route::get('/dusun', function () {
     return view('pendata.form_dusun');
+});
+Route::get('/profil_pendata', function () {
+    return view('pendata.profil');
 });
 

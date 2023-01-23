@@ -39,13 +39,10 @@
                                 </div>
 
                                 <div class="card-footer text-end">
-                                    <button class="btn btn-primary"><a href="/pendata"></a>Simpan</button>
+                                    <button class="btn btn-primary"><a href="/rekapan"></a>Simpan</button>
                                     <input class="btn btn-light" type="reset" value="Cancel">
                                 </div>
-                                <!-- <div class="card-footer text-end">
-                                        <button class="btn btn-primary">simpan</a></button>
-                                        <input class="btn btn-light" type="reset" value="Cancel">
-                                    </div> -->
+                            </div>
                         </form>
                     </div>
                 </div>

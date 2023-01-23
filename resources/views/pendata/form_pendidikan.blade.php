@@ -59,10 +59,7 @@
                                     <button class="btn btn-primary"><a href="/dusun"></a>Next</button>
                                     <input class="btn btn-light" type="reset" value="Cancel">
                                 </div>
-                                <!-- <div class="card-footer text-end">
-                                        <button class="btn btn-primary">simpan</a></button>
-                                        <input class="btn btn-light" type="reset" value="Cancel">
-                                    </div> -->
+                            </div>
                         </form>
                     </div>
                 </div>

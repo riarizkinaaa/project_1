@@ -10,7 +10,7 @@
         <div class="page-header">
           <div class="row">
             <div class="col-sm-6">
-              <h3>Rekapan Data Anak Yatim Piatu</h3>
+              <h3>Data Anak Yatim Piatu Hari ini</h3>
             </div>
           </div>
         </div>
