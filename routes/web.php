@@ -37,4 +37,7 @@ Route::get('/dusun', function () {
 Route::get('/profil_pendata', function () {
     return view('pendata.profil');
 });
+Route::get('/detail_anak', function () {
+    return view('pendata.detail');
+});
 

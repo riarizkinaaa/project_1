@@ -95,11 +95,11 @@
                                         <h6>Verifikator</h6>
                                     </div>
                                 </li>
-                                <li><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
+                                <li class="dropdown"><a class="nav-link menu-title link-nav" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
                                 </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="sliders"></i><span>Verifikasi Data</span></a>
+                                <li class="dropdown"><a class="nav-link menu-title link-nav" href=""><i data-feather="sliders"></i><span>Verifikasi Data</span></a>
                                 </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="layout"></i><span>Laporan</span></a>
+                                <li class="dropdown"><a class="nav-link menu-title link-nav" href=""><i data-feather="layout"></i><span>Laporan</span></a>
                                 </li>
                                 <!-- <li class="sidebar-main-title">
                                     <div>

@@ -22,7 +22,7 @@
                         <div class="col-xl-4">
                             <div class="card">
                                 <div class="card-body">
-                                    
+
                                     <div class="row mb-2">
                                         <div class="profile-title">
                                             <div class="media"> <img class="img-70 rounded-circle" alt="" src="/template/assets/images/user/7.jpg">
@@ -44,19 +44,19 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-5">
+                                        <div class="col-sm-6 col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Nama lengkap</label>
                                                 <input class="form-control" type="text">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-md-3">
+                                        <div class="col-sm-6 col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Email</label>
                                                 <input class="form-control" type="text">
                                             </div>
                                         </div>
-                                        <div class="col-sm-6 col-md-4">
+                                        <div class="col-sm-6 col-md-6">
                                             <div class="mb-3">
                                                 <label class="form-label">Alamat</label>
                                                 <input class="form-control" type="email">
@@ -70,11 +70,11 @@
                                         </div>
                                         <div class="col-sm-6 col-md-6">
                                             <div class="mb-3">
-                                                <label class="form-label">Satatus</label>
+                                                <label class="form-label">Status</label>
                                                 <input class="form-control" type="text">
                                             </div>
                                         </div>
-                                       
+
                                     </div>
                                 </div>
                             </form>

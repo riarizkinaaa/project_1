@@ -27,6 +27,9 @@
   <!-- Feather icon-->
   <link rel="stylesheet" type="text/css" href="/template/assets/css/feather-icon.css">
   <!-- Plugins css start-->
+  <link rel="stylesheet" type="text/css" href="/template/assets/css/select2.css">
+  <link rel="stylesheet" type="text/css" href="/template/assets/css/date-picker.css">
+  <link rel="stylesheet" type="text/css" href="/template/assets/css/todo.css">
   <link rel="stylesheet" type="text/css" href="/template/assets/css/datatables.css">
   <link rel="stylesheet" type="text/css" href="/template/assets/css/datatable-extension.css">
   <link rel="stylesheet" type="text/css" href="/template/assets/css/jsgrid.css">
@@ -97,27 +100,22 @@
                     <h6>Pendataan</h6>
                   </div>
                 </li>
-                <li><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
-                </li>
-                <li><a class="nav-link menu-title" href="/form_anak"><i data-feather="sliders"></i><span>Form Pendataan</span></a>
-                </li>
-                <li><a class="nav-link menu-title" href="/data_anak"><i data-feather="layout"></i><span>Data Anak</span></a>
-                </li>
-                </li>
-                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="package"></i><span>Data Hari Ini</span></a>
-                </li>
+                <li class="dropdown"><a class="nav-link menu-title link-nav" href="jsgrid-table.html"><i data-feather="home"></i><span>Dashboard</span></a></li>
+                <li class="dropdown"><a class="nav-link menu-title link-nav" href="/form_anak"><i data-feather="sliders"></i><span>Form Pendataan</span></a></li>
+                <li class="dropdown"><a class="nav-link menu-title link-nav" href="/data_anak"><i data-feather="layout"></i><span>Data Anak</span></a></li>
+                <li class="dropdown"><a class="nav-link menu-title link-nav" href="javascript:void(0)"><i data-feather="package"></i><span>Data Hari Ini</span></a></li>
                 <li class="sidebar-main-title">
                   <div>
                     <h6>Pengguna</h6>
                   </div>
                 </li>
-                <li> <a class="nav-link menu-title" href="/profil_pendata"><i data-feather="user"></i><span>Profil</span></a></li>
+                <li class="dropdown"><a class="nav-link menu-title link-nav" href="/profil_pendata"><i data-feather="user"></i><span>Profil</span></a></li>
                 <li class="sidebar-main-title">
                   <div>
                     <h6>Bantuan</h6>
                   </div>
                 </li>
-                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="phone-call"></i><span>Kontak Person</span></a></li>
+                <li class="dropdown"><a class="nav-link menu-title link-nav" href="javascript:void(0)"><i data-feather="phone-call"></i><span>Kontak Person</span></a></li>
               </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
@@ -143,6 +141,15 @@
   <script src="/template/assets/js/bootstrap/popper.min.js"></script>
   <script src="/template/assets/js/bootstrap/bootstrap.min.js"></script>
   <!-- Plugins JS start-->
+  <script src="/template
+  /assets/js/todo/todo.js"></script>
+  <script src="/template/assets/js/datepicker/date-picker/datepicker.js"></script>
+  <script src="/template/assets/js/datepicker/date-picker/datepicker.en.js"></script>
+  <script src="/template/assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+  <script src="/template/assets/js/select2/select2.full.min.js"></script>
+  <script src="/template/assets/js/select2/select2-custom.js"></script>
+  <script src="/template/assets/js/form-validation-custom.js"></script>
+  <script src="/template/assets/js/task/custom.js"></script>
   <script src="/template/assets/js/datatable/datatables/datatable.custom.js"></script>
   <script src="/template/assets/js/tooltip-init.js"></script>
   <script src="/template/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>

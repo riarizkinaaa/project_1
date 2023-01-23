@@ -39,7 +39,7 @@
                                 </div>
 
                                 <div class="card-footer text-end">
-                                    <button class="btn btn-primary"><a href="/rekapan"></a>Simpan</button>
+                                    <button class="btn btn-primary"><a href="/data_anak"></a>Simpan</button>
                                     <input class="btn btn-light" type="reset" value="Cancel">
                                 </div>
                             </div>

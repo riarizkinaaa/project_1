@@ -55,7 +55,8 @@
                                                 <tbody>
                                                     <tr>
                                                         <th scope="row">1</th>
-                                                        <td>Tiger Nixon</td>
+                                                        <td><a class="mb-0 d-flex" href="/detail_anak">Tiger Nixon</a></td>
+                                                        <!-- <td>Tiger Nixon</td> -->
                                                         <td>System Architect</td>
                                                         <td>Edinburgh</td>
                                                         <td>61</td>

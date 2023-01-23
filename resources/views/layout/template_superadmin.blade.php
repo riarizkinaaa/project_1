@@ -27,6 +27,8 @@
     <!-- Feather icon-->
     <link rel="stylesheet" type="text/css" href="/template/assets/css/feather-icon.css">
     <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="/template/assets/css/select2.css">
+    <link rel="stylesheet" type="text/css" href="/template/assets/css/date-picker.css">
     <link rel="stylesheet" type="text/css" href="/template/assets/css/datatables.css">
     <link rel="stylesheet" type="text/css" href="/template/assets/css/datatable-extension.css">
     <!-- Plugins css Ends-->
@@ -95,29 +97,16 @@
                                         <h6>Admin</h6>
                                     </div>
                                 </li>
-                                <li><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="home"></i><span>Dashboard</span></a>
+                                <li class="dropdown"><a class="nav-link menu-title link-nav" href="jsgrid-table.html"><i data-feather="home"></i><span>Dashboard</span></a></li>
+
+                                <li class="dropdown"> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="hard-drive"></i><span>Data Master</span></a>
+                                    <ul class="nav-submenu menu-content">
+                                        <li><a href="/">Data Dusun</a></li>
+                                        <li><a href="/">Data Desa</a></li>
+                                        <li><a href="/">Data Kecamatan</a></li>
+                                        <li><a href="/">Data petugas Pendata</a></li>
+                                    </ul>
                                 </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="sliders"></i><span>Data Anak</span></a>
-                                </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="layout"></i><span>Data Dusun</span></a>
-                                </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="layout"></i><span>Data Desa</span></a>
-                                </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="layout"></i><span>Data Kecamatan</span></a>
-                                </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="layout"></i><span>Data Petugas Pendata</span></a>
-                                </li>
-                                <li><a class="nav-link menu-title" href=""><i data-feather="layout"></i><span>Data Verifikator</span></a>
-                                </li>
-                                <!-- <li class="sidebar-main-title">
-                                    <div>
-                                        <h6>Pengguna</h6>
-                                    </div>
-                                </li>
-                                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="user-check"></i><span>Profil</span></a>
-                                </li>
-                                <li> <a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="package"></i><span>Jumlah Data Hari Ini</span></a>
-                                </li> -->
                             </ul>
                         </div>
                         <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
