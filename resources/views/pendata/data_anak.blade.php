@@ -25,6 +25,7 @@
                                     <option>Nama</option>
                                     <option>Usia</option>
                                     <option>Jenis Kelamin</option>
+                                    <option>Status Anak</option>
                                     <option>Dusun</option>
                                 </select>
                             </label>
@@ -32,36 +33,44 @@
                                 <button class="btn btn-sm btn-secondary" id="sort" type="button">Sort</button>
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="dt-ext table-responsive">
-                                        <table class="display" id="multilevel-btn">
-                                            <thead>
-                                                <tr>
-                                                    <th>Nama Lengkap Anak</th>
-                                                    <th>Tanggal Lahir</th>
-                                                    <th>Usia</th>
-                                                    <th>Jenis Kelamin</th>
-                                                    <th>Status Anak</th>
-                                                    <th>Dusun</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Tiger Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>61</td>
-                                                    <td>2011/04/25</td>
-                                                    <td>$320,800</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                        <!-- Container-fluid starts-->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">No</th>
+                                                        <th scope="col">Nama Lengkap Anak</th>
+                                                        <th scope="col">Tanggal Lahir</th>
+                                                        <th scope="col">Usia</th>
+                                                        <th scope="col">Jenis Kelamin</th>
+                                                        <th scope="col">Status Anak</th>
+                                                        <th scope="col">Dusun</th>
+                                                        <th scope="col">#</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Tiger Nixon</td>
+                                                        <td>System Architect</td>
+                                                        <td>Edinburgh</td>
+                                                        <td>61</td>
+                                                        <td>2011/04/25</td>
+                                                        <td>$320,800</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <!-- Container-fluid Ends-->
                     </div>
                 </div>
             </div>
