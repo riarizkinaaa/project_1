@@ -11,9 +11,6 @@
     <link rel="shortcut icon" href="/template/assets/images/favicon.png" type="image/x-icon">
     <title>viho - Premium Admin Template</title>
     <!-- Google font-->
-    {{-- boostrap --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
@@ -30,7 +27,6 @@
     <link rel="stylesheet" type="text/css" href="/template/assets/css/feather-icon.css">
     <!-- Plugins css start-->
     <link rel="stylesheet" type="text/css" href="/template/assets/css/datatables.css">
-    <link rel="stylesheet" type="text/css" href="/template/assets/css/datatable-extension.css">
     <!-- Plugins css Ends-->
     <!-- Bootstrap css-->
     <link rel="stylesheet" type="text/css" href="/template/assets/css/bootstrap.css">
@@ -186,7 +182,7 @@
               </li>
             </ul>
           </div>
-         @include('layout.nav_admin')
+          @include('layout.nav_pendata')
         </header>
         <!-- Page Sidebar Ends-->
         <div class="page-body">
@@ -194,12 +190,12 @@
             <div class="page-header">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3>Basic Button</h3>
+                  <h3>Basic DataTables</h3>
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li class="breadcrumb-item">Extension Data Tables</li>
-                    <li class="breadcrumb-item active">Basic Button</li>
+                    <li class="breadcrumb-item">Data Tables</li>
+                    <li class="breadcrumb-item active">Basic Init</li>
                   </ol>
                 </div>
                 <div class="col-sm-6">
@@ -227,112 +223,71 @@
           <!-- Container-fluid starts-->
           <div class="container-fluid">
             <div class="row">
+              <!-- Zero Configuration  Starts-->
               <div class="col-sm-12">
                 <div class="card">
                   <div class="card-header">
-                    <h5>Custom Button</h5><span>Fundamentally, each button is described by an object - this object is read by Buttons and displayed as appropriate. There are a number of parameters that Buttons will automatically look for in the button description object such as buttons.buttons.text and buttons.buttons.action which are the two fundamental parameters (button text and the action to take when activated).</span>
+                    <h5>Zero Configuration</h5><span>DataTables has most features enabled by default, so all you need to do to use it with your own tables is to call the construction function:<code>$().DataTable();</code>.</span><span>Searching, ordering and paging goodness will be immediately added to the table, as shown in this example.</span>
                   </div>
-                  <div class="card-body btn-showcase">
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalmdo" data-whatever="@fat">tambah data</button>
-                    <div class="modal fade" id="exampleModalfat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel2">New message</h5>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                            <form>
-                              <div class="mb-3">
-                                <label class="col-form-label" for="pekerjaan">pekerjaan</label>
-                                <input class="form-control" type="text" name="pekerjaan" value="@fat">
-                              </div>
-                              <div class="mb-3">
-                                <label class="col-form-label" for="message-text">Message:</label>
-                                <textarea class="form-control" id="message-text"></textarea>
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal fade" id="exampleModalmdo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title">New message</h5>
-                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          {{-- tempat mengedit --}}
-                          <div class="modal-body">
-                            <form action="{{ route('pekerja.store') }}" method="post">
-                              @csrf
-                              <div class="mb-3">
-                                <label class="col-form-label" for="pekerjaan">Pekerjaan</label>
-                                <input class="form-control" name="pekerjaan" id="pekerjaan" type="text">
-                              </div>
-                            </form>
-                          </div>
-                          <div class="modal-footer">
-                            {{-- <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button> --}}
-                            <button class="btn btn-primary" type="submit">Send message</button>
-                          </div>
-                          {{-- end --}}
-                        </div>
-                      </div>
-                    </div>
                   <div class="card-body">
-                    <div class="dt-ext table-responsive">
-                      <table class="display" id="custom-button">
+                    <div class="table-responsive">
+                      <table class="display" id="basic-1">
                         <thead>
                           <tr>
-                            <th>No</th>
-                            <th>pekerjaan orang tua</th>
-                            <th>Aksi</th>
-                           
+                            <th>Name lengkap</th>
+                            <th>No KK</th>
+                            <th>No NIK</th>
+                            <th>alamat</th>
+                            <th>jenis kelamin</th>
+                            <th>tempat lahir</th>
+                            <th>tanggal lahir</th>
+                            <th>alamat sekolah</th>
+                            <th>status anak</th>
+                            <th>foto anak</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @php
-                              $no=1;
-                          @endphp
-                          @foreach ($pekerjaan as $kerja)
-                           <tr>
-                             <td>{{ $no++ }}</td>
-                             <td>{{ $kerja->pekerjaan }}</td>
-                             <td> 
-                             <a href="{{ route('pekerja.edit',$kerja->id_pekerjaan) }}"><i style="color: green" class="bi bi-pencil-square"></i></a>
-                             </td>
-                             <td>
-                              <form action="{{ route('pekerja.destroy',$kerja->id_pekerjaan) }}" method="post">
-                                @csrf
-                                @method('delete')
-                                <button type="submit" style="background-color: red"><i class="bi bi-trash-fill" style="color: white"></i></button>
+                            @foreach ($anak as $ank)
+                            <tr>
+                              <td>{{ $ank->nama_anak }}</td>
+                              <td>{{ $ank->nomor_kk }}</td>
+                              <td>{{ $ank->nomor_nik }}</td>
+                              <td>{{ $ank->alamat }}</td>
+                              <td>{{ $ank->jenis_kelamin }}</td>
+                              <td>{{ $ank->tgl_lahir }}</td>
+                              <td>{{ $ank->nama_wali }}</td>
+                              <td>{{ $ank->alamat_sekolah }}</td>
+                              <td>{{ $ank->status_anak }}</td>
+                              <td>{{ $ank->foto_anak }}</td>
+                            </tr>
                                 
-                             </td>
-                           </tr>
-                              
-                          @endforeach
+                            @endforeach
+                          
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-12">
-                
+              <!-- Zero Configuration  Ends-->
+              
+              <!-- Language Starts-->
+              
+          <!-- Container-fluid Ends-->
+        </div>
+        <!-- footer start-->
+        <footer class="footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-6 footer-copyright">
+                <p class="mb-0">Copyright 2021-22 © viho All rights reserved.</p>
               </div>
-              <div class="col-sm-12">
-               
-              </div>
-              <div class="col-sm-12">
-                
+              <div class="col-md-6">
+                <p class="pull-right mb-0">Hand crafted & made with <i class="fa fa-heart font-secondary"></i></p>
               </div>
             </div>
           </div>
-          <!-- Container-fluid Ends-->
-        </div>
-        
+        </footer>
       </div>
     </div>
     <!-- latest jquery-->
@@ -348,25 +303,7 @@
     <script src="/template/assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- Plugins JS start-->
     <script src="/template/assets/js/datatable/datatables/jquery.dataTables.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.buttons.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/jszip.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/buttons.colVis.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/pdfmake.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/vfs_fonts.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.autoFill.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.select.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/buttons.bootstrap4.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/buttons.html5.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/buttons.print.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.bootstrap4.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.responsive.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/responsive.bootstrap4.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.keyTable.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.colReorder.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.fixedHeader.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.rowReorder.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/dataTables.scroller.min.js"></script>
-    <script src="/template/assets/js/datatable/datatable-extension/custom.js"></script>
+    <script src="/template/assets/js/datatable/datatables/datatable.custom.js"></script>
     <script src="/template/assets/js/tooltip-init.js"></script>
     <!-- Plugins JS Ends-->
     <!-- Theme js-->

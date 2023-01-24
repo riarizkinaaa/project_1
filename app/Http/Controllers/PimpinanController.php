@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Role;
 use Illuminate\Http\Request;
 
-class RoleContoller extends Controller
+class PimpinanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class RoleContoller extends Controller
      */
     public function index()
     {
-        $role=Role::get();
-        return view('superUser.role',compact('role'));
+        return view('pimpinan.dash');
     }
 
     /**
@@ -36,10 +34,7 @@ class RoleContoller extends Controller
      */
     public function store(Request $request)
     {
-        Role::create([
-            'role'=>$request->role
-        ]);
-
+        //
     }
 
     /**

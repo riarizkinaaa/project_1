@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AnakY;
 use Illuminate\Http\Request;
 
 class AnakController extends Controller
@@ -12,8 +13,10 @@ class AnakController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('superUser.anak');
+    {   
+        $anak=AnakY::get();
+        // dd($anak);
+        return view('pendata.form_anak',compact('anak'));
     }
 
     /**
@@ -34,7 +37,19 @@ class AnakController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        AnakY::create([
+            'nama_lengkap'=>$request->nama_lengkap,
+            'nomer_kk'=>$request->nomer_kk,
+            'nomer_nik'=>$request->nomer_nik,
+            'alamat'=>$request->alamat,
+            'jenis_kelamin'=>$request->jenis_kelamin,
+            'tgl_lahir'=>$request->tgl_lahir,
+            'nama_wali'=>$request->nama_wali,
+            'alamat_sekolah'=>$request->alamat_sekolah,
+            'status_anak'=>$request->status_anak,
+            'foto_anak'=>$request->foto_anak,
+        ]);
+        return redirect('/dataA');
     }
 
     /**

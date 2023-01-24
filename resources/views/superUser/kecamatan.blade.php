@@ -13,7 +13,6 @@
     <!-- Google font-->
     {{-- boostrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
@@ -229,9 +228,7 @@
             <div class="row">
               <div class="col-sm-12">
                 <div class="card">
-                  <div class="card-header">
-                    <h5>Custom Button</h5><span>Fundamentally, each button is described by an object - this object is read by Buttons and displayed as appropriate. There are a number of parameters that Buttons will automatically look for in the button description object such as buttons.buttons.text and buttons.buttons.action which are the two fundamental parameters (button text and the action to take when activated).</span>
-                  </div>
+                  
                   <div class="card-body btn-showcase">
                     <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalmdo" data-whatever="@fat">tambah data</button>
                     <div class="modal fade" id="exampleModalfat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -302,58 +299,13 @@
                              <td>{{ $kec->kecamatan }}</td>
                              <td> 
                              <div class="card-body btn-showcase">
-                              <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalmdo" data-whatever="@fat">
-                             <a href="{{ route('kecamatan.edit',$kec->id_kecamatan) }}"><i style="color: white" class="bi bi-pencil-square"></i></a>
+                              <button class="btn btn-primary tombol-ubah" type="button" data-bs-toggle="modal" data-bs-target="#modal_ubah" data-whatever="@fat" data-id="{{ $kec->id_kecamatan }}">
+                              <i style="color: white" class="bi bi-pencil-square"></i>
 
                               </button>
-                              <div class="modal fade" id="exampleModalfat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel2">New message</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                      <form>
-                                        <div class="mb-3">
-                                          <label class="col-form-label" for="kecamatan">kecamatan</label>
-                                          <input class="form-control" type="text" name="kecamatan" id="kecamatan" value="{{ $kec->kecamatan }}">
-                                        </div>
-                                        <div class="mb-3">
-                                          <label class="col-form-label" for="message-text">Message:</label>
-                                          <textarea class="form-control" id="message-text"></textarea>
-                                        </div>
-                                      </form>
-                                    </div>
-                                  </div>
-                                </div>
+                              
                               </div>
-                              <div class="modal fade" id="exampleModalmdo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title">New message</h5>
-                                      <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                    </div>
-                                    {{-- tempat mengedit --}}
-                                    <div class="modal-body">
-                                      <form action="{{ route('kecamatan.update',$kec->id_kecamatan) }}" method="post">
-                                        @csrf
-                                        @method('put')
-                                        <div class="mb-3">
-                                          <label class="col-form-label" for="kecamatan">kecamatan</label>
-                                          <input class="form-control" name="kecamatan" value="{{ $kec->kecamatan }}" id="kecamatan" type="text">
-                                        </div>
-                                      </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                      {{-- <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button> --}}
-                                      <button class="btn btn-primary" type="submit">Send message</button>
-                                    </div>
-                                    {{-- end --}}
-                                  </div>
-                                </div>
-                              </div>
+                              
                              </td>
                              <td>
                               <form action="{{ route('kecamatan.destroy',$kec->id_kecamatan) }}" method="post">
@@ -365,6 +317,55 @@
                            </tr>
                               
                           @endforeach
+
+                          <div class="modal fade" id="exampleModalmdo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title">New message</h5>
+                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                {{-- tempat mengedit --}}
+                                <div class="modal-body">
+                                  <form action="{{ route('kecamatan.update',$kec->id_kecamatan) }}" method="post">
+                                    @csrf
+                                    @method('put')
+                                    <div class="mb-3">
+                                      <label class="col-form-label" for="kecamatan">kecamatan</label>
+                                      <input class="form-control" name="kecamatan" value="{{ $kec->kecamatan }}" id="kecamatan" type="text">
+                                    </div>
+                                  </form>
+                                </div>
+                                <div class="modal-footer">
+                                  {{-- <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button> --}}
+                                  <button class="btn btn-primary" type="submit">Send message</button>
+                                </div>
+                                {{-- end --}}
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="modal fade" id="modal_ubah" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                  <h5 class="modal-title" id="exampleModalLabel2">New message</h5>
+                                  <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                  <form action="{{ route('kecamatan.update',$kec->id_kecamatan) }}" method="post">
+                                    @csrf
+                                    @method('put')
+                                    <input type="hidden" name="id_kec" id="id_kec">
+                                    <div class="mb-3">
+                                      <label class="col-form-label" for="nama_kecamatan">kecamatan</label>
+                                      <input class="form-control" type="text" name="nama_kecamatan" id="nama_kecamatan" >
+                                    </div>
+                                    <button class="btn btn-info" type="submit">update</button>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
                         </tbody>
                       </table>
                     </div>
@@ -424,6 +425,29 @@
     <!-- Theme js-->
     <script src="/template/assets/js/script.js"></script>
     <script src="/template/assets/js/theme-customizer/customizer.js"></script>
+    <script>
+
+      $(function() {
+  
+        $('.tombol-ubah').on('click', function() {
+            const id = $(this).data('id')
+            $('.form-ubah form').attr('action', '/kecamatan/update/' + id)
+            // console.log(id);
+  
+            $.ajax({
+                url: `/kecamatan/` + id + `/edit`,
+                method: 'get',
+                dataType: 'json',
+                success: function(data) {
+                    // console.log(data)
+                    $('#id_kec').val(data.id_kecamatan)
+                    $('#nama_kecamatan').val(data.kecamatan)
+  
+                }
+            })
+        })
+    })
+    </script>
     <!-- login js-->
     <!-- Plugin used-->
   </body>

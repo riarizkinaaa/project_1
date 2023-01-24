@@ -64,7 +64,8 @@ class KecamatanController extends Controller
     {
         $kecamatan=Kecamatan::find($id);
         // dd($kecamatan);
-        return view('superUser.kecamatan',compact('kecamatan'));
+        // return view('superUser.kecamatan',compact('kecamatan'));
+        echo json_encode($kecamatan);
     }
 
     /**
@@ -77,7 +78,7 @@ class KecamatanController extends Controller
     public function update(Request $request, $id)
     {
         Kecamatan::find($id)->update([
-            'kecamatan'=>$request->kecamatan
+            'kecamatan'=>$request->nama_kecamatan
         ]);
         return redirect('kecamatan');
     }
